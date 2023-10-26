@@ -11,7 +11,20 @@ public static Main {
         sc.nextLine();
 
         for(int i = 1; i <= np; i++){
-            
+            System.out.print("Enter name of Patient " + i + ": ");
+            String name = sc.nextLine();
+            System.out.print("Enter birthyear of Patient " + i + ": ");
+            int by = sc.nextInt();
+            sc.nextLine();
+
+            int age = 2023 - by;
+
+            String[] patient = {name, Integer.toString(age)};
+            Patient.put(i, patient);
+        }
+
+        for(int i = 1; i <= np; i++){
+            System.out.print("Patient " + i + ": " + Arrays.toString(Patient.get(i)))
         }
     }
 }
